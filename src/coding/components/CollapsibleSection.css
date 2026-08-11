@@ -1,0 +1,74 @@
+/* Custom CSS for CollapsibleSection Component */
+.collapsible-section-container {
+  border-radius: var(--coding-radius);
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.collapsible-section-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+.collapsible-section-content {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  border-top: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+/* ==================================================== */
+/* 9-TIER BREAKPOINT RESPONSIVENESS                     */
+/* ==================================================== */
+
+/* 1. Very Small Mobile (<= 288px) */
+@media (max-width: 288px) {
+  .collapsible-section-container { margin-bottom: 0.4rem; }
+  .collapsible-section-btn { padding: 0.6rem 0.8rem; font-size: 0.64rem; }
+  .collapsible-section-content { padding: 0 0.8rem 0.8rem 0.8rem; }
+}
+
+/* 2. Small Mobile (289px - 384px) */
+@media (min-width: 289px) and (max-width: 384px) {
+  .collapsible-section-btn { padding: 0.68rem 0.8rem; font-size: 0.68rem; }
+  .collapsible-section-content { padding: 0 0.8rem 0.8rem 0.8rem; }
+}
+
+/* 3. Medium Mobile (385px - 461px) */
+@media (min-width: 385px) and (max-width: 461px) {
+  .collapsible-section-btn { padding: 0.8rem 1rem; font-size: 0.72rem; }
+  .collapsible-section-content { padding: 0 1rem 1rem 1rem; }
+}
+
+/* 7. Large Laptop (1025px - 1152px) */
+@media (min-width: 1025px) and (max-width: 1152px) {
+  .collapsible-section-container { margin-bottom: 1rem; }
+  .collapsible-section-btn { padding: 0.92rem 1.4rem; font-size: 0.84rem; }
+  .collapsible-section-content { padding: 0 1.4rem 1.4rem 1.4rem; }
+}
+
+/* 8. Desktop (1153px - 1536px) */
+@media (min-width: 1153px) and (max-width: 1536px) {
+  .collapsible-section-container { margin-bottom: 1.2rem; }
+  .collapsible-section-btn { padding: 1rem 1.6rem; font-size: 0.92rem; }
+  .collapsible-section-content { padding: 0 1.6rem 1.6rem 1.6rem; }
+}
+
+/* 9. Ultra Wide Desktop (> 1536px) */
+@media (min-width: 1537px) {
+  .collapsible-section-container { margin-bottom: 1.6rem; }
+  .collapsible-section-btn { padding: 1.2rem 2rem; font-size: 1.08rem; }
+  .collapsible-section-content { padding: 0 2rem 2rem 2rem; }
+}

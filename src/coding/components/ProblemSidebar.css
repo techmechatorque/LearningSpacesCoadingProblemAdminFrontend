@@ -1,0 +1,249 @@
+/* Custom CSS for ProblemSidebar Component */
+.problem-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: var(--coding-surface);
+  border-right: 1px solid var(--coding-border);
+}
+
+.problem-sidebar-header {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.problem-sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+.problem-sidebar-search {
+  width: 100%;
+  min-width: auto;
+}
+
+.problem-sidebar-search-input {
+  padding: 0.4rem 0.4rem 0.4rem 1.6rem;
+  font-size: 0.7rem;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+.problem-sidebar-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  transition: gap 0.3s ease;
+}
+
+.problem-sidebar-filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problem-sidebar-filter-label {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-sidebar-select {
+  border-radius: 3px;
+  padding: 2px 3px;
+  font-size: 0.6rem;
+  background: var(--coding-bg);
+  color: var(--coding-text);
+  border: 1px solid var(--coding-border);
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+.problem-sidebar-select.cat-select {
+  max-width: 80px;
+}
+
+.problem-sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: padding 0.3s ease, gap 0.3s ease;
+}
+
+.problem-sidebar-empty {
+  text-align: center;
+  font-size: 0.7rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-sidebar-category-title {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem 0;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--coding-border);
+  transition: font-size 0.3s ease;
+}
+
+.problem-sidebar-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: gap 0.3s ease;
+}
+
+.problem-sidebar-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  background: transparent;
+  color: var(--coding-text);
+  transition: all 0.2s;
+}
+
+.problem-sidebar-item-btn:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.problem-sidebar-item-btn.selected {
+  background: rgba(245, 197, 24, 0.1);
+  border-color: rgba(245, 197, 24, 0.3);
+  color: #fff;
+}
+
+.problem-sidebar-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+
+.problem-sidebar-unsolved-icon {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid var(--coding-border);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.problem-sidebar-item-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.7rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-sidebar-badge {
+  font-size: 8px;
+  padding: 2px 5px;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* ==================================================== */
+/* Semantic Color Classes                               */
+/* ==================================================== */
+.problem-sidebar-text-primary { color: #fff; }
+.problem-sidebar-text-muted { color: var(--coding-text-muted); }
+.problem-sidebar-text-accent { color: var(--coding-primary); }
+.problem-sidebar-text-success { color: var(--coding-easy); }
+.problem-sidebar-text-medium { color: var(--coding-medium); }
+
+
+/* ==================================================== */
+/* 9-TIER BREAKPOINT RESPONSIVENESS                     */
+/* ==================================================== */
+
+/* 1. Very Small Mobile (<= 288px) */
+@media (max-width: 288px) {
+  .problem-sidebar-header { padding: 0.6rem; gap: 0.4rem; }
+  .problem-sidebar-title { font-size: 0.72rem; }
+  .problem-sidebar-search-input { padding: 0.32rem 0.32rem 0.32rem 1.4rem; font-size: 0.6rem; }
+  .problem-sidebar-filter-label { font-size: 0.56rem; }
+  .problem-sidebar-select { font-size: 0.56rem; padding: 2px; }
+  .problem-sidebar-select.cat-select { max-width: 64px; }
+  .problem-sidebar-list { padding: 0.6rem; gap: 0.8rem; }
+  .problem-sidebar-item-btn { padding: 0.32rem 0.4rem; }
+  .problem-sidebar-item-name { font-size: 0.64rem; }
+  .problem-sidebar-badge { font-size: 7px; padding: 2px 3px; }
+}
+
+/* 2. Small Mobile (289px - 384px) */
+@media (min-width: 289px) and (max-width: 384px) {
+  .problem-sidebar-header { padding: 0.6rem; }
+  .problem-sidebar-list { padding: 0.6rem; gap: 0.8rem; }
+  .problem-sidebar-item-btn { padding: 0.32rem 0.48rem; }
+  .problem-sidebar-item-name { font-size: 0.68rem; }
+}
+
+/* 7. Large Laptop (1025px - 1152px) */
+@media (min-width: 1025px) and (max-width: 1152px) {
+  .problem-sidebar-header { padding: 1rem; gap: 0.8rem; }
+  .problem-sidebar-title { font-size: 0.92rem; }
+  .problem-sidebar-search-input { padding: 0.48rem 0.48rem 0.48rem 1.8rem; font-size: 0.76rem; }
+  .problem-sidebar-filters { gap: 0.6rem; margin-top: 0.6rem; }
+  .problem-sidebar-filter-label { font-size: 0.68rem; }
+  .problem-sidebar-select { font-size: 0.68rem; padding: 2px 5px; }
+  .problem-sidebar-select.cat-select { max-width: 96px; }
+  .problem-sidebar-list { padding: 1rem; gap: 1.4rem; }
+  .problem-sidebar-category-title { font-size: 0.68rem; margin-bottom: 0.6rem; }
+  .problem-sidebar-items-wrapper { gap: 0.28rem; }
+  .problem-sidebar-item-btn { padding: 0.48rem 0.68rem; }
+  .problem-sidebar-unsolved-icon { width: 13px; height: 13px; }
+  .problem-sidebar-item-name { font-size: 0.76rem; }
+  .problem-sidebar-badge { font-size: 9px; padding: 2px 6px; }
+}
+
+/* 8. Desktop (1153px - 1536px) */
+@media (min-width: 1153px) and (max-width: 1536px) {
+  .problem-sidebar-header { padding: 1.2rem; gap: 1rem; }
+  .problem-sidebar-title { font-size: 1.08rem; }
+  .problem-sidebar-search-input { padding: 0.6rem 0.6rem 0.6rem 2rem; font-size: 0.84rem; }
+  .problem-sidebar-filters { gap: 0.8rem; margin-top: 0.8rem; }
+  .problem-sidebar-filter-label { font-size: 0.8rem; }
+  .problem-sidebar-select { font-size: 0.8rem; padding: 3px 6px; }
+  .problem-sidebar-select.cat-select { max-width: 120px; }
+  .problem-sidebar-list { padding: 1.2rem; gap: 1.6rem; }
+  .problem-sidebar-category-title { font-size: 0.8rem; margin-bottom: 0.8rem; }
+  .problem-sidebar-items-wrapper { gap: 0.4rem; }
+  .problem-sidebar-item-btn { padding: 0.6rem 0.8rem; }
+  .problem-sidebar-unsolved-icon { width: 14px; height: 14px; }
+  .problem-sidebar-item-name { font-size: 0.88rem; }
+  .problem-sidebar-badge { font-size: 10px; padding: 3px 8px; }
+}
+
+/* 9. Ultra Wide Desktop (> 1536px) */
+@media (min-width: 1537px) {
+  .problem-sidebar-header { padding: 1.6rem; gap: 1.2rem; }
+  .problem-sidebar-title { font-size: 1.2rem; }
+  .problem-sidebar-search-input { padding: 0.8rem 0.8rem 0.8rem 2.4rem; font-size: 1rem; border-radius: 6px; }
+  .problem-sidebar-filters { gap: 1rem; margin-top: 1rem; }
+  .problem-sidebar-filter-label { font-size: 0.92rem; }
+  .problem-sidebar-select { font-size: 0.92rem; padding: 5px 10px; border-radius: 5px; }
+  .problem-sidebar-select.cat-select { max-width: 160px; }
+  .problem-sidebar-list { padding: 1.6rem; gap: 2rem; }
+  .problem-sidebar-category-title { font-size: 0.92rem; margin-bottom: 1rem; }
+  .problem-sidebar-items-wrapper { gap: 0.6rem; }
+  .problem-sidebar-item-btn { padding: 0.8rem 1rem; border-radius: 6px; }
+  .problem-sidebar-unsolved-icon { width: 16px; height: 16px; }
+  .problem-sidebar-item-name { font-size: 1rem; }
+  .problem-sidebar-badge { font-size: 11px; padding: 5px 10px; border-radius: 5px; }
+}

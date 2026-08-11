@@ -1,0 +1,268 @@
+/* ============================================================
+   LeetCode-style Dockview Theme for Workspace Engine
+   Overrides dockview-theme-dark to match a premium coding UI
+   ============================================================ */
+
+/* ── Root Variables ── */
+.dockview-theme-dark {
+  --dv-paneview-header-border-color: var(--coding-border, #2a2f3a);
+  --dv-tabs-and-actions-container-font-size: 12px;
+  --dv-activegroup-visiblepanel-tab-background-color: var(--coding-surface, #1a1d24);
+  --dv-activegroup-hiddenpanel-tab-background-color: transparent;
+  --dv-inactivegroup-visiblepanel-tab-background-color: var(--coding-surface, #1a1d24);
+  --dv-inactivegroup-hiddenpanel-tab-background-color: transparent;
+  --dv-tab-divider-color: transparent;
+  --dv-activegroup-visiblepanel-tab-color: #fff;
+  --dv-activegroup-hiddenpanel-tab-color: var(--coding-text-muted, #94a3b8);
+  --dv-inactivegroup-visiblepanel-tab-color: #e2e8f0;
+  --dv-inactivegroup-hiddenpanel-tab-color: var(--coding-text-muted, #94a3b8);
+  --dv-separator-border: var(--coding-border, #2a2f3a);
+  --dv-background-color: var(--coding-bg, #0f1115);
+  --dv-group-view-background-color: var(--coding-panel-bg, #0f1115);
+}
+
+/* ── Tab Bar ── */
+.dockview-theme-dark .tabs-container {
+  background: var(--coding-bg, #0f1115) !important;
+  height: 35px !important;
+  min-height: 35px !important;
+  padding: 0 4px;
+  gap: 0;
+  border-bottom: 1px solid var(--coding-border, #2a2f3a);
+}
+
+/* ── Individual Tabs ── */
+.dockview-theme-dark .tab {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--coding-font, 'Inter', system-ui, sans-serif);
+  padding: 0 14px !important;
+  height: 35px !important;
+  line-height: 35px;
+  border-radius: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--coding-text-muted, #94a3b8) !important;
+  position: relative;
+  transition: color 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+.dockview-theme-dark .tab:hover {
+  color: #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ── Active Tab ── */
+.dockview-theme-dark .tab.active-tab,
+.dockview-theme-dark .tab.inactive-tab[data-active="true"] {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+/* Active tab bottom indicator (LeetCode-style) */
+.dockview-theme-dark .tab.active-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: var(--coding-primary, #f5c518);
+  border-radius: 2px 2px 0 0;
+}
+
+/* ── Tab Close Button ── */
+.dockview-theme-dark .tab .dv-default-tab-action {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.dockview-theme-dark .tab:hover .dv-default-tab-action,
+.dockview-theme-dark .tab.active-tab .dv-default-tab-action {
+  opacity: 0.7;
+}
+
+.dockview-theme-dark .tab .dv-default-tab-action:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Tab Actions Container (right side buttons) ── */
+.dockview-theme-dark .void-container,
+.dockview-theme-dark .right-actions-container {
+  background: var(--coding-bg, #0f1115) !important;
+}
+
+/* ── Group Header ── */
+.dockview-theme-dark .groupview > .tabs-and-actions-container {
+  background: var(--coding-bg, #0f1115) !important;
+}
+
+/* ── Panel Content Area ── */
+.dockview-theme-dark .groupview > .content-container {
+  background: var(--coding-panel-bg, #0f1115);
+}
+
+/* ── Separators / Sashes (drag handles between panels) ── */
+.dockview-theme-dark .sash-container .sash {
+  background: transparent !important;
+  transition: background 0.15s ease;
+}
+
+.dockview-theme-dark .sash-container .sash:hover,
+.dockview-theme-dark .sash-container .sash.active {
+  background: var(--coding-primary, #f5c518) !important;
+  opacity: 0.6;
+}
+
+/* ── Vertical Sash (between left and right) ── */
+.dockview-theme-dark .sash-container .sash.vertical {
+  width: 4px !important;
+}
+
+/* ── Horizontal Sash (between top and bottom) ── */
+.dockview-theme-dark .sash-container .sash.horizontal {
+  height: 4px !important;
+}
+
+/* ── Drop target overlay (when dragging tabs) ── */
+.dockview-theme-dark .drop-target-dropzone {
+  background: rgba(245, 197, 24, 0.08) !important;
+  border: 2px dashed rgba(245, 197, 24, 0.3) !important;
+  border-radius: 4px;
+}
+
+.dockview-theme-dark .dv-drop-target-container .dv-drop-target {
+  background: rgba(245, 197, 24, 0.15) !important;
+  border: 2px solid rgba(245, 197, 24, 0.4) !important;
+  border-radius: 6px;
+}
+
+/* ── Watermark (empty dockview placeholder) ── */
+.dockview-theme-dark .watermark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--coding-text-muted, #94a3b8);
+  font-size: 13px;
+  font-family: var(--coding-font, 'Inter', system-ui, sans-serif);
+}
+
+/* ── Floating Groups ── */
+.dockview-theme-dark .dv-floating-group {
+  border: 1px solid var(--coding-border, #2a2f3a);
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+/* ── Panel Content Wrappers ── */
+.workspace-engine-panel-content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: var(--coding-panel-bg, #0f1115);
+  color: var(--coding-text, #e2e8f0);
+  font-family: var(--coding-font, 'Inter', system-ui, sans-serif);
+}
+
+/* ── Loading State ── */
+.workspace-engine-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--coding-text-muted, #94a3b8);
+  font-size: 13px;
+  gap: 8px;
+}
+
+.workspace-engine-loading::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--coding-border, #2a2f3a);
+  border-top-color: var(--coding-primary, #f5c518);
+  border-radius: 50%;
+  animation: ws-engine-spin 0.8s linear infinite;
+}
+
+@keyframes ws-engine-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Error Panel ── */
+.workspace-engine-error-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  color: var(--coding-hard, #ef4444);
+  font-size: 13px;
+  text-align: center;
+  background: rgba(239, 68, 68, 0.04);
+}
+
+/* ── Disable transition during resize (prevents jank) ── */
+.dockview-theme-dark .dv-resize-container {
+  transition: none !important;
+}
+
+/* ── Scrollbar styling for panel content ── */
+.workspace-engine-panel-content::-webkit-scrollbar,
+.coding-panel-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.workspace-engine-panel-content::-webkit-scrollbar-track,
+.coding-panel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workspace-engine-panel-content::-webkit-scrollbar-thumb,
+.coding-panel-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+.workspace-engine-panel-content::-webkit-scrollbar-thumb:hover,
+.coding-panel-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Ensure Dockview fills its container ── */
+.dockview-theme-dark {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* ── Override header for a tighter LeetCode-like feel ── */
+.dockview-theme-dark .header-title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Tab drag preview ── */
+.dockview-theme-dark .dv-tab-drag-image {
+  background: var(--coding-surface, #1a1d24);
+  border: 1px solid var(--coding-border, #2a2f3a);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}

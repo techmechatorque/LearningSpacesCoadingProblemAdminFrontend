@@ -1,0 +1,473 @@
+/* Custom CSS for ContestsDashboard Page */
+.contests-dashboard-layout {
+  flex-direction: row;
+}
+
+.contests-sidebar {
+  max-width: 240px;
+  padding: 1.2rem;
+  overflow-y: auto;
+}
+
+.contests-sidebar-title {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contests-icon-trophy {
+  width: 19px; /* default */
+  height: 19px;
+  color: var(--coding-primary);
+  transition: width 0.3s, height 0.3s;
+}
+
+.contests-empty-msg {
+  color: var(--coding-text-muted);
+}
+
+.contests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contest-list-item {
+  padding: 0.8rem;
+  border-radius: var(--coding-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--coding-bg);
+  border: 1px solid var(--coding-border);
+}
+
+.contest-list-item.active {
+  background: var(--coding-surface-hover);
+  border-color: var(--coding-primary);
+}
+
+.contest-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.contest-status-badge {
+  font-size: 8px;
+}
+
+.contests-icon-check {
+  width: 11px;
+  height: 11px;
+  color: var(--coding-easy);
+  transition: width 0.3s, height 0.3s;
+}
+
+.contest-item-title {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contest-item-time {
+  font-size: 0.6rem;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-detail-area {
+  padding: 1.6rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contests-error {
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  color: var(--coding-danger);
+  background: color-mix(in srgb, var(--coding-danger) 10%, transparent);
+}
+
+.contests-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 800px;
+}
+
+.contests-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.contests-status-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.contests-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--coding-primary);
+  transition: font-size 0.3s ease;
+}
+
+.contests-icon-clock {
+  width: 13px;
+  height: 13px;
+  transition: width 0.3s, height 0.3s;
+}
+
+.contests-main-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem 0;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contests-description {
+  margin: 0;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-times {
+  font-size: 0.7rem;
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 1.6rem;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-icon-award {
+  width: 13px;
+  height: 13px;
+  transition: width 0.3s, height 0.3s;
+}
+
+.contests-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: var(--coding-radius);
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+}
+
+.coding-stat-title {
+  transition: font-size 0.3s ease;
+}
+
+.contests-rank-val { color: var(--coding-primary); }
+.contests-score-val { color: var(--coding-easy); }
+.contests-solved-val { color: var(--coding-text); }
+.coding-stat-value {
+  transition: font-size 0.3s ease;
+}
+
+.contests-bottom-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.6rem;
+}
+
+.contests-section-title {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--coding-border);
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contests-upcoming-msg {
+  padding: 1.6rem;
+  text-align: center;
+  border-radius: var(--coding-radius);
+  margin-top: 0.8rem;
+  color: var(--coding-text-muted);
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+  transition: font-size 0.3s ease;
+}
+
+.contests-problems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.contests-problem-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--coding-radius);
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.contests-problem-name {
+  font-size: 0.88rem;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contests-problem-meta {
+  font-size: 0.6rem;
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-problem-meta span {
+  font-weight: bold;
+}
+
+.difficulty-easy { color: var(--coding-easy); }
+.difficulty-medium { color: var(--coding-medium); }
+.difficulty-hard { color: var(--coding-hard); }
+
+.contests-icon-chevron {
+  width: 13px;
+  height: 13px;
+  transition: width 0.3s, height 0.3s;
+}
+
+.contests-scoreboard-container {
+  border-radius: var(--coding-radius);
+  margin-top: 0.8rem;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+}
+
+.contests-no-participants {
+  padding: 1.6rem;
+  text-align: center;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-scoreboard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contests-scoreboard-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.contests-scoreboard-user {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.contests-scoreboard-rank {
+  font-weight: bold;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+.contests-scoreboard-rank.rank-1 {
+  color: var(--coding-primary);
+}
+
+.contests-scoreboard-name {
+  font-weight: 600;
+  color: var(--coding-text);
+  transition: font-size 0.3s ease;
+}
+
+.contests-scoreboard-score-info {
+  text-align: right;
+}
+
+.contests-scoreboard-score {
+  font-weight: bold;
+  color: var(--coding-primary);
+  transition: font-size 0.3s ease;
+}
+
+.contests-scoreboard-solved {
+  font-size: 0.6rem;
+  color: var(--coding-text-muted);
+  transition: font-size 0.3s ease;
+}
+
+/* ==================================================== */
+/* 9-TIER BREAKPOINT RESPONSIVENESS                     */
+/* ==================================================== */
+
+/* 1. Very Small Mobile (<= 288px) */
+@media (max-width: 288px) {
+  .contests-dashboard-layout { flex-direction: column; }
+  .contests-sidebar { max-width: 100%; padding: 0.8rem; }
+  .contests-detail-area { padding: 0.8rem; }
+  
+  .contests-bottom-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .contests-stats-grid { grid-template-columns: 1fr; gap: 0.8rem; padding: 0.8rem; }
+  
+  .contests-main-title { font-size: 1.2rem; }
+  .contests-times { flex-direction: column; gap: 0.4rem; }
+  
+  .contests-sidebar-title { font-size: 0.88rem; }
+  .contests-icon-trophy { width: 16px; height: 16px; }
+  .contest-item-title { font-size: 0.72rem; }
+  .contest-item-time { font-size: 0.56rem; }
+  
+  .contests-timer { font-size: 0.64rem; }
+  .contests-icon-clock { width: 11px; height: 11px; }
+}
+
+/* 2. Small Mobile (289px - 384px) */
+@media (min-width: 289px) and (max-width: 384px) {
+  .contests-dashboard-layout { flex-direction: column; }
+  .contests-sidebar { max-width: 100%; padding: 0.8rem; }
+  .contests-detail-area { padding: 0.8rem; }
+  
+  .contests-bottom-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .contests-stats-grid { grid-template-columns: 1fr; gap: 0.8rem; padding: 0.8rem; }
+  
+  .contests-main-title { font-size: 1.2rem; }
+  .contests-times { flex-direction: column; gap: 0.4rem; }
+  
+  .contests-sidebar-title { font-size: 0.88rem; }
+  .contests-icon-trophy { width: 16px; height: 16px; }
+  .contest-item-title { font-size: 0.76rem; }
+  .contest-item-time { font-size: 0.56rem; }
+}
+
+/* 3. Medium Mobile (385px - 461px) */
+@media (min-width: 385px) and (max-width: 461px) {
+  .contests-dashboard-layout { flex-direction: column; }
+  .contests-sidebar { max-width: 100%; padding: 1.2rem; }
+  .contests-detail-area { padding: 1.2rem; }
+  
+  .contests-bottom-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .contests-stats-grid { grid-template-columns: 1fr; gap: 0.8rem; padding: 0.8rem; }
+}
+
+/* 4. Large Mobile (462px - 614px) */
+@media (min-width: 462px) and (max-width: 614px) {
+  .contests-dashboard-layout { flex-direction: column; }
+  .contests-sidebar { max-width: 100%; padding: 1.2rem; }
+  .contests-detail-area { padding: 1.2rem; }
+  
+  .contests-bottom-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .contests-stats-grid { grid-template-columns: 1fr; gap: 0.8rem; padding: 1rem; }
+}
+
+/* 5. Tablet (615px - 819px) */
+@media (min-width: 615px) and (max-width: 819px) {
+  .contests-dashboard-layout { flex-direction: column; }
+  .contests-sidebar { max-width: 100%; padding: 1.2rem; }
+  .contests-detail-area { padding: 1.2rem; }
+  .contests-bottom-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+}
+
+/* 6. Laptop (820px - 1024px) */
+@media (min-width: 820px) and (max-width: 1024px) {
+  /* Default CSS acts beautifully here */
+}
+
+/* 7. Large Laptop (1025px - 1152px) */
+@media (min-width: 1025px) and (max-width: 1152px) {
+  .contests-main-title { font-size: 1.68rem; }
+  .contests-sidebar-title { font-size: 1.08rem; }
+  .contests-icon-trophy { width: 21px; height: 21px; }
+  .contest-item-title { font-size: 0.84rem; }
+  .contest-item-time { font-size: 0.64rem; }
+}
+
+/* 8. Desktop (1153px - 1536px) */
+@media (min-width: 1153px) and (max-width: 1536px) {
+  .contests-sidebar { max-width: 280px; padding: 1.6rem; }
+  .contests-detail-area { padding: 2.4rem; }
+  
+  .contests-main-title { font-size: 1.8rem; }
+  .contests-description { font-size: 0.84rem; }
+  .contests-times { font-size: 0.76rem; }
+  .contests-timer { font-size: 0.76rem; }
+  .contests-icon-clock { width: 14px; height: 14px; }
+  
+  .contests-sidebar-title { font-size: 1.12rem; }
+  .contests-icon-trophy { width: 22px; height: 22px; }
+  .contest-item-title { font-size: 0.88rem; }
+  .contest-item-time { font-size: 0.68rem; }
+  .contests-icon-check { width: 13px; height: 13px; }
+  
+  .contests-section-title { font-size: 1.12rem; }
+  .contests-problem-name { font-size: 0.96rem; }
+  .contests-problem-item { padding: 1rem 1.6rem; }
+  .contests-problem-meta { font-size: 0.68rem; }
+  .contests-icon-chevron { width: 14px; height: 14px; }
+  
+  .contests-scoreboard-row { padding: 1rem; }
+  .contests-scoreboard-rank { font-size: 0.88rem; }
+  .contests-scoreboard-name { font-size: 0.88rem; }
+  .contests-scoreboard-score { font-size: 0.88rem; }
+  .contests-scoreboard-solved { font-size: 0.68rem; }
+  
+  .coding-stat-title { font-size: 0.88rem; }
+  .coding-stat-value { font-size: 1.2rem; }
+}
+
+/* 9. Ultra Wide Desktop (> 1536px) */
+@media (min-width: 1537px) {
+  .contests-sidebar { max-width: 360px; padding: 2rem; }
+  .contests-detail-area { padding: 3.2rem; }
+  
+  .contests-main-title { font-size: 2rem; }
+  .contests-description { font-size: 0.96rem; }
+  .contests-times { font-size: 0.88rem; }
+  .contests-timer { font-size: 0.88rem; }
+  .contests-icon-clock { width: 18px; height: 18px; }
+  .contests-icon-award { width: 18px; height: 18px; }
+  
+  .contests-sidebar-title { font-size: 1.28rem; }
+  .contests-icon-trophy { width: 26px; height: 26px; }
+  .contest-item-title { font-size: 1rem; }
+  .contest-item-time { font-size: 0.8rem; }
+  .contests-icon-check { width: 14px; height: 14px; }
+  
+  .contests-section-title { font-size: 1.28rem; margin-bottom: 0.8rem; }
+  .contests-problem-name { font-size: 1.12rem; }
+  .contests-problem-item { padding: 1.2rem 2rem; margin-bottom: 0.8rem; }
+  .contests-problem-meta { font-size: 0.8rem; margin-top: 0.4rem; }
+  .contests-icon-chevron { width: 18px; height: 18px; }
+  
+  .contests-scoreboard-row { padding: 1.2rem; }
+  .contests-scoreboard-rank { font-size: 1rem; }
+  .contests-scoreboard-name { font-size: 1rem; }
+  .contests-scoreboard-score { font-size: 1rem; }
+  .contests-scoreboard-solved { font-size: 0.8rem; margin-top: 0.2rem; }
+  
+  .coding-stat-title { font-size: 1rem; }
+  .coding-stat-value { font-size: 1.4rem; }
+}

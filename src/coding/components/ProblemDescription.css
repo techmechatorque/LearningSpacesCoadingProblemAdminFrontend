@@ -1,0 +1,293 @@
+/* Custom CSS for ProblemDescription Component */
+.problem-description-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-description-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  transition: margin-bottom 0.3s ease;
+}
+
+.problem-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+  transition: gap 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.problem-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+.problem-category-badge {
+  background: var(--coding-surface);
+  border-color: var(--coding-border);
+  color: var(--coding-text-muted);
+}
+
+.problem-report-btn {
+  padding: 0.4rem;
+  transition: padding 0.3s ease;
+}
+
+.problem-statement-title {
+  margin-bottom: 0.4rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-statement-content {
+  padding: 1.2rem;
+  border-radius: 6px;
+  line-height: 1.6;
+  transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+.problem-section-mt {
+  margin-top: 1.6rem;
+  transition: margin-top 0.3s ease;
+}
+
+.problem-constraints-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: font-size 0.3s ease;
+}
+
+.problem-constraints-list {
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-constraint-item {
+  margin-bottom: 0.2rem;
+}
+
+.problem-constraint-code {
+  padding: 0.08rem 0.24rem;
+  border-radius: 3px;
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+.problem-examples-title {
+  margin-bottom: 0.8rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-example-card {
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  background: var(--coding-surface);
+  border: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.problem-example-heading {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  transition: gap 0.3s ease;
+}
+
+.problem-example-box {
+  padding: 0.8rem;
+  border-radius: 5px;
+  background: var(--coding-bg);
+  border: 1px solid var(--coding-border);
+  transition: padding 0.3s ease;
+}
+
+.problem-example-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-example-pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+  transition: font-size 0.3s ease;
+}
+
+.problem-example-explanation {
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+  transition: font-size 0.3s ease;
+}
+
+.problem-hints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  transition: gap 0.3s ease;
+}
+
+.problem-hint-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  transition: padding 0.3s ease, gap 0.3s ease;
+}
+
+.problem-solution-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+  transition: gap 0.3s ease;
+}
+
+.problem-solution-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.4rem 0;
+  transition: font-size 0.3s ease;
+}
+
+.problem-solution-text {
+  white-space: pre-line;
+  margin: 0;
+  line-height: 1.6;
+  transition: font-size 0.3s ease;
+}
+
+.problem-solution-code-pre {
+  padding: 0.8rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+/* ==================================================== */
+/* Semantic Color Classes                               */
+/* ==================================================== */
+.problem-desc-text-primary { color: #fff; }
+.problem-desc-text-muted { color: var(--coding-text-muted); }
+.problem-desc-text-accent { color: var(--coding-primary); }
+.problem-desc-text-success { color: var(--coding-easy); }
+
+.problem-desc-panel {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--coding-border);
+}
+
+.problem-desc-panel-light {
+  background: rgba(255,255,255,0.05);
+}
+
+.problem-desc-panel-bordered {
+  background: var(--coding-bg);
+  border: 1px solid var(--coding-border);
+}
+
+/* ==================================================== */
+/* 9-TIER BREAKPOINT RESPONSIVENESS                     */
+/* ==================================================== */
+
+/* 1. Very Small Mobile (<= 288px) */
+@media (max-width: 288px) {
+  .problem-example-grid { grid-template-columns: 1fr; gap: 0.4rem; }
+  .problem-title { font-size: 0.92rem; }
+  .problem-statement-content { padding: 0.6rem; font-size: 0.68rem; }
+  .problem-example-card { padding: 0.6rem; }
+  .problem-example-box { padding: 0.4rem; }
+  .problem-hint-item { padding: 0.6rem; flex-direction: column; gap: 0.4rem; }
+  .problem-solution-code-pre { padding: 0.6rem; font-size: 0.68rem; }
+}
+
+/* 2. Small Mobile (289px - 384px) */
+@media (min-width: 289px) and (max-width: 384px) {
+  .problem-example-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+  .problem-title { font-size: 1rem; }
+  .problem-statement-content { padding: 0.8rem; font-size: 0.72rem; }
+  .problem-example-box { padding: 0.6rem; }
+}
+
+/* 3. Medium Mobile (385px - 461px) */
+@media (min-width: 385px) and (max-width: 461px) {
+  .problem-example-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+  .problem-title { font-size: 1.08rem; }
+  .problem-statement-content { padding: 0.8rem; }
+}
+
+/* 4. Large Mobile (462px - 614px) */
+@media (min-width: 462px) and (max-width: 614px) {
+  .problem-example-grid { grid-template-columns: 1fr; }
+}
+
+/* 7. Large Laptop (1025px - 1152px) */
+@media (min-width: 1025px) and (max-width: 1152px) {
+  .problem-title { font-size: 1.4rem; }
+  .problem-statement-content { padding: 1.4rem; font-size: 0.84rem; }
+  .problem-example-card { padding: 1rem; }
+  .problem-example-box { padding: 1rem; }
+  .problem-example-pre { font-size: 0.76rem; }
+  .problem-constraints-title { font-size: 0.76rem; }
+  .problem-constraints-list { font-size: 0.84rem; }
+  .problem-hint-item { padding: 1rem; }
+  .problem-solution-code-pre { padding: 1rem; font-size: 0.76rem; }
+}
+
+/* 8. Desktop (1153px - 1536px) */
+@media (min-width: 1153px) and (max-width: 1536px) {
+  .problem-title { font-size: 1.6rem; }
+  .problem-statement-content { padding: 1.6rem; font-size: 0.88rem; }
+  .problem-section-mt { margin-top: 2rem; }
+  .problem-example-card { padding: 1.2rem; }
+  .problem-example-box { padding: 1.2rem; }
+  .problem-example-pre { font-size: 0.8rem; }
+  .problem-example-explanation { font-size: 0.8rem; margin-top: 1rem; }
+  .problem-constraints-title { font-size: 0.8rem; }
+  .problem-constraints-list { font-size: 0.88rem; }
+  .problem-hint-item { padding: 1.2rem; font-size: 0.88rem; }
+  .problem-solution-heading { font-size: 0.92rem; }
+  .problem-solution-text { font-size: 0.88rem; }
+  .problem-solution-code-pre { padding: 1.2rem; font-size: 0.84rem; }
+}
+
+/* 9. Ultra Wide Desktop (> 1536px) */
+@media (min-width: 1537px) {
+  .problem-title { font-size: 2rem; }
+  .problem-statement-title { font-size: 1.4rem; }
+  .problem-statement-content { padding: 2rem; font-size: 1rem; }
+  .problem-section-mt { margin-top: 2.4rem; }
+  .problem-examples-title { font-size: 1.4rem; }
+  .problem-example-heading { font-size: 1.08rem; }
+  .problem-example-card { padding: 1.6rem; }
+  .problem-example-box { padding: 1.6rem; }
+  .problem-example-label { font-size: 0.92rem; }
+  .problem-example-pre { font-size: 0.92rem; }
+  .problem-example-explanation { font-size: 0.92rem; margin-top: 1.2rem; }
+  .problem-constraints-title { font-size: 0.92rem; }
+  .problem-constraints-list { font-size: 1rem; }
+  .problem-constraint-code { padding: 0.16rem 0.4rem; font-size: 0.92rem; }
+  .problem-hint-item { padding: 1.6rem; font-size: 1rem; }
+  .problem-solution-heading { font-size: 1.08rem; }
+  .problem-solution-text { font-size: 1rem; }
+  .problem-solution-code-pre { padding: 1.6rem; font-size: 0.92rem; }
+}
